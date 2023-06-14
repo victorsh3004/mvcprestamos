@@ -9,7 +9,7 @@
 	class mainModel{
 		/*--------------	Funcion para conectar a la DB---------------------*/
 		protected static function conectar(){
-			$conexion = new PDO(SGDB, USER, PASS);
+			$conexion = new PDO(SGBD, USER, PASS);
 			$conexion->exec("SET CHARACTER SET utf8");
 			return $conexion;
 		}
@@ -49,7 +49,7 @@
 		}
 
 		/*------------Funcion limpiar cadenas--------------*/
-		protected static function limpiar_cadena(){
+		protected static function limpiar_cadena($cadena){
 			$cadena = trim($cadena);
 			$cadena=stripslashes($cadena);
 			$cadena=str_ireplace("<script>", "", $cadena);

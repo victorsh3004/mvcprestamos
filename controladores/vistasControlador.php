@@ -13,9 +13,9 @@
 		/*---- Controlador obtener vistas ------*/
 		public function obtener_vistas_controlador(){
 			if (isset($_GET['views'])) {
-				print_r($_GET['views']." gg ");
+				//print_r($_GET['views']." gg ");
 				$ruta=explode("/", $_GET['views']);
-				print_r($ruta[0]);
+				//print_r($ruta[0]);
 				$respuesta=vistasModelo::obtener_vistas_modelo($ruta[0]);
 			}else{
 				$respuesta="login";
