@@ -6,7 +6,7 @@
 
 		/*------ Modelo iniciar session --------*/
 		protected static function iniciar_sesion_modelo($datos){
-			$sql=mainModel::conectar()->prepare("SELECT * FROM usuario WHERE usuario_usuario=:Usuario AND usuario_clave=:Clave AND usuario_estado='Activa'")
+			$sql=mainModel::conectar()->prepare("SELECT * FROM usuario WHERE usuario_usuario=:Usuario AND usuario_clave=:Clave AND usuario_estado='Activa'");
 			$sql->bindParam(":Usuario",$datos['Usuario']);
 			$sql->bindParam(":Clave",$datos['Clave']);
 			$sql->execute();

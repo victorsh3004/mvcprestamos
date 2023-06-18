@@ -1,4 +1,4 @@
-<?php 
+ 	<?php 
 	const SERVER="localhost";
 	const DB="prestamos";
 	const USER="root";

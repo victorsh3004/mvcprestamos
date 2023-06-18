@@ -50,6 +50,8 @@
 		</div>
 	</a>
 
+	<?php if($_SESSION['privilegio_spm']==1){
+	?>
 	<a href="<?php echo SERVERURL; ?>user-list/" class="tile">
 		<div class="tile-tittle">Usuarios</div>
 		<div class="tile-icon">
@@ -57,6 +59,7 @@
 			<p>50 Registrados</p>
 		</div>
 	</a>
+	<?php } ?>
 
 	<a href="<?php echo SERVERURL; ?>company/" class="tile">
 		<div class="tile-tittle">Empresa</div>

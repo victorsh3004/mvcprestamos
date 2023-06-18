@@ -13,7 +13,7 @@
 			echo $ins_usuario->agregar_usuario_controlador();
 		}
 	}else{
-		session_start(['name' => 'SPM']);
+		session_start(['name' => 'SPM']);//sintaxis de php7
 		session_unset(); //vaciamos la session
 		session_destroy();
 		header("Location: ".SERVERURL."login/");

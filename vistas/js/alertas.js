@@ -1,7 +1,7 @@
 
 const formularios_ajax = document.querySelectorAll(".FormularioAjax");
 
-function enviar_formulario_ajax(e){
+function enviar_formulario_ajax(e){/*Envia datos via ajax */
 	e.preventDefault();
 
 	let data = new FormData(this);
@@ -9,6 +9,7 @@ function enviar_formulario_ajax(e){
 	let action = this.getAttribute("action");
 	let tipo = this.getAttribute("data-form");
 
+	/**/
 	let encabezados = new Headers();
 
 	let config = {
@@ -60,7 +61,11 @@ formularios_ajax.forEach(formularios => {
 	formularios.addEventListener("submit", enviar_formulario_ajax);
 });
 
-function alertas_ajax(alerta){
+
+/*Las alertas estan creadas con sweetalert2 version8
+https://sweetalert2.github.io
+*/
+function alertas_ajax(alerta){ /*Alerta trae el JSON */
 	if(alerta.Alerta==="simple"){
 		Swal.fire({
 			title: alerta.Titulo,

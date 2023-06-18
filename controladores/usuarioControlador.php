@@ -1,9 +1,9 @@
 <?php
 
 	if($peticionAjax){
-		require_once "../modelos/usuarioModelo.php";
+		require_once "../modelos/usuarioModelo.php";/* Desde usuarioajax.php */
 	}else{
-		require_once "./modelos/usuarioModelo.php";
+		require_once "./modelos/usuarioModelo.php";/*Desde index*/
 	}
 
 	class usuarioControlador extends usuarioModelo{
@@ -36,7 +36,6 @@
 				echo json_encode($alerta);
 				exit();
 			}
-
 
 			/*== Verificando integridad de los datos ==*/
 			if(mainModel::verificar_datos("[0-9-]{8,9}",$dni)){
